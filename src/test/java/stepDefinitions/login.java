@@ -5,6 +5,7 @@ import javax.tools.DocumentationTool.Location;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import base.TestBase;
 import core.BrowserInteractions;
@@ -21,6 +22,7 @@ public class login extends TestBase {
 		Thread.sleep(2000);
 		BrowserInteractions.clearAndType(LocatorType.ID, "username", string);
 		BrowserInteractions.click(LocatorType.ID, "continue");
+		Assert.assertFalse(true);
 	}
 
 	public void enterPassword(String string) throws Exception {
